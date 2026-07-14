@@ -72,7 +72,31 @@ Less than 2 seconds after the first failed attempt, Wazuh correlated the repeate
 - Wazuh Threat Hunting dashboard showing the detection timeline
 - Rule 5763 alert detail (level 10)
 
+## Analyst Response
+
+Following detection, a full investigative workflow was carried out to determine impact and appropriate response — not just to confirm the alert fired.
+
+**1. Success/Failure Verification**
+Wazuh Threat Hunting → Events was queried for the full day (Jul 3, 2026, 00:00–23:59) on `agent.id: 006` using two targeted searches:
+```
+rule.description: "Accepted password"
+rule.description: "session opened"
+```
+Both queries returned **"No results match your search criteria."** This confirms the attacker never achieved a successful authentication against the `yung` account at any point during the attack window (which spanned roughly 17:09–17:21, based on repeated rule 5763 triggers).
+
+**Verdict: Brute force attack detected and contained by default — no compromise occurred.**
+
+**2. IOC Context**
+Attacking IP (192.168.1.110) is internal to the lab network (the Kali attacker VM itself), consistent with a controlled exercise rather than an external threat. In a production scenario, this IP would be checked against AbuseIPDB/VirusTotal before any conclusion.
+
+**3. Containment Decision**
+Recommended action: block the source IP at the firewall or via Wazuh Active Response, and monitor for renewed attempts from the same source.
+
+*Note: active blocking (`iptables -A INPUT -s 192.168.1.110 -j DROP`) was intentionally not executed in this lab, since 192.168.1.110 is the attacker VM needed for future exercises in this portfolio. This decision — and the reasoning behind it — is documented here rather than silently omitted, reflecting how a real analyst would justify a deviation from the default playbook action.*
+
 ## Lessons Learned
 - Individual failed login events (level 5) are common and expected noise — the real value of a SIEM is in **correlation**, not raw log collection.
 - A repeatable, documented detection (attack → detection → correlation → alert) is far more valuable for a portfolio than an undocumented one-off test.
 - This lab reinforced the full alert lifecycle a SOC L1 analyst needs to understand: from ingestion, to correlation, to the moment a human analyst receives an actionable, prioritized alert.
+- Confirming attack success/failure requires deliberate verification (targeted queries against the raw event log), not assumption based on the alert severity alone — a level 10 alert means "high-confidence pattern match," not "compromise confirmed."
+- Real analyst work includes justifying deviations from the default playbook (e.g., not blocking an IP needed for future testing) rather than blindly executing every step — documenting the reasoning is as important as the action itself.
