@@ -67,9 +67,12 @@ Less than 2 seconds after the first failed attempt, Wazuh correlated the repeate
 | Initial Access | Valid Accounts (attempted) | T1078 |
 
 ## Screenshots
-*(See `/screenshots` folder in this project directory)*
 - Hydra attack command and terminal output
+- <img width="606" height="341" alt="Captura de pantalla 2026-07-13 210700" src="https://github.com/user-attachments/assets/5747e0ba-d4d0-40f3-bc7a-3fab6b16dba3" />
+
 - Wazuh Threat Hunting dashboard showing the detection timeline
+- <img width="836" height="529" alt="Captura de pantalla 2026-07-13 210725" src="https://github.com/user-attachments/assets/968ceac2-b1b9-46e6-b1e8-14d8bd24f4e0" />
+
 - Rule 5763 alert detail (level 10)
 
 ## Analyst Response
