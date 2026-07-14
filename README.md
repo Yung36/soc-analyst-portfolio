@@ -1,4 +1,4 @@
-# SOC Analyst Portfolio
+SOC Analyst Portfolio
 
 Welcome to my cybersecurity portfolio.
 
@@ -6,99 +6,95 @@ This repository documents my hands-on journey toward becoming a SOC Level 1 Anal
 
 Each project includes the objective, environment setup, tools used, investigation process, findings, screenshots, and lessons learned.
 
----
-
-## About This Portfolio
+About This Portfolio
 
 The goal of this portfolio is to demonstrate practical cybersecurity skills through hands-on projects and documented investigations.
 
 The main areas covered include:
 
-* Security monitoring and alert investigation
-* Log analysis and event investigation
-* Network traffic analysis
-* Linux and Windows security fundamentals
-* Threat detection and investigation
-* Incident response processes
-* Security Operations Center (SOC) workflows
 
----
+Security monitoring and alert investigation
+Log analysis and event investigation
+Network traffic analysis
+Linux and Windows security fundamentals
+Threat detection and investigation
+Incident response processes
+Security Operations Center (SOC) workflows
 
-## Projects
 
-| Project     | Description                                                                                                | Skills & Tools                                               |
-| ----------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| Coming soon | Cybersecurity labs, investigations, and simulated incidents will be documented here as they are completed. | Wazuh, Splunk, Wireshark, Linux, Windows, SIEM, MITRE ATT&CK |
+Projects
 
----
+ProjectDescriptionSkills & Tools01 - Wazuh + Hydra SSH Brute Force DetectionSimulated SSH brute force attack detected and correlated in real-time via Wazuh SIEM. Includes full analyst investigation: success/failure verification, MITRE ATT&CK mapping, and containment decision.Wazuh, Hydra, Linux, SIEM, MITRE ATT&CK, Incident ResponseComing soonSysmon + custom Wazuh detection rules (ransomware-style simulation).Wazuh, Sysmon, Windows
 
-## Skills & Technologies
+Skills & Technologies
 
-### Security Operations
+Security Operations
 
-* Security monitoring
-* Alert triage fundamentals
-* Log analysis
-* Incident response fundamentals
-* Threat detection
-* Threat intelligence research
-* MITRE ATT&CK Framework
 
-### Systems & Networking
+Security monitoring
+Alert triage fundamentals
+Log analysis
+Incident response fundamentals
+Threat detection
+Threat intelligence research
+MITRE ATT&CK Framework
 
-* Linux administration
-* Windows fundamentals
-* Active Directory fundamentals
-* TCP/IP networking
-* Network protocols
-* Network traffic analysis
-* Wireshark
 
-### Security Tools & Platforms
+Systems & Networking
 
-* Wazuh SIEM
-* Splunk
-* Sysmon
-* TryHackMe
-* LetsDefend
-* Virtual lab environments
 
----
+Linux administration
+Windows fundamentals
+Active Directory fundamentals
+TCP/IP networking
+Network protocols
+Network traffic analysis
+Wireshark
 
-## Learning Path
+
+Security Tools & Platforms
+
+
+Wazuh SIEM
+Splunk
+Sysmon
+TryHackMe
+LetsDefend
+Virtual lab environments
+
+
+Learning Path
 
 Currently developing cybersecurity skills through:
 
-* CompTIA Security+ preparation
-* TryHackMe cybersecurity labs
-* LetsDefend SOC investigations
-* Linux administration practice
-* Networking fundamentals
-* SIEM detection engineering
-* Threat intelligence and IOC analysis
-* Home lab development with Windows, Linux, Wazuh, and Splunk
 
----
+CompTIA Security+ preparation
+TryHackMe cybersecurity labs
+LetsDefend SOC investigations
+Linux administration practice
+Networking fundamentals
+SIEM detection engineering
+Threat intelligence and IOC analysis
+Home lab development with Windows, Linux, Wazuh, and Splunk
 
-## Project Documentation Approach
+
+Project Documentation Approach
 
 Each project follows a structured documentation process:
 
-1. Objective and scenario
-2. Lab environment and setup
-3. Tools and technologies used
-4. Investigation methodology
-5. Findings and analysis
-6. MITRE ATT&CK mapping (when applicable)
-7. Screenshots and evidence
-8. Lessons learned
 
----
+Objective and scenario
+Lab environment and setup
+Tools and technologies used
+Investigation methodology
+Findings and analysis
+MITRE ATT&CK mapping (when applicable)
+Screenshots and evidence
+Lessons learned
 
-## Objective
+
+Objective
 
 Build practical cybersecurity experience and develop the technical skills required for a SOC Level 1 Analyst role through continuous learning, hands-on practice, and documented security investigations.
-
----
 
 This portfolio is continuously updated as new cybersecurity projects, labs, and investigations are completed.
